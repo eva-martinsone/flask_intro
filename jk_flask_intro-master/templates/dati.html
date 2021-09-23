@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block saturs %}
+<h1>Dati no faila</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Vārds</th>
+            <th scope="col">Uzvārds</th>
+            <th scope="col">Hobijs</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for rindina in rindinas %}
+        <tr>
+            <td>{{ rindina[0] }}</td>
+            <td>{{ rindina[1] }}</td>
+            <td>{{ rindina[2] }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Vārds</th>
+            <th scope="col">Uzvārds</th>
+            <th scope="col">Hobijs</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for rindina in rindinas2 %}
+        <tr>
+            <td>{{ rindina['vards'] }}</td>
+            <td>{{ rindina['uzvards'] }}</td>
+            <td>{{ rindina['hobijs'] }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock %}

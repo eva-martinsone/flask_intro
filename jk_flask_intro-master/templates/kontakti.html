@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% set aktiva_lapa = 'kontakti' %}
+
+{% block saturs %}
+    <h1>Kontakti</h1>
+    <p class="fs-5 col-md-8">Māris Danne</p>
+    {% if veiksmigi == '1' %}
+    <div class="alert alert-success" role="alert">
+        Dati ir veiksmīgi nosūtīti!
+    </div>
+    {% endif %}
+    <form method="POST" action='/postData'>
+        <label >Vārds: <input type="text" name="vards"></label>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
