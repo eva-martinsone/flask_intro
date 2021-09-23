@@ -1,1 +1,2 @@
-# flask_intro
+# JK flask tests
+Eva Mārtiņsone
