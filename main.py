@@ -3,8 +3,12 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "SVEIKA, pasaule!"
+def index():
+    return 'Sveiki!!!'
 
-if __name__ == '_main_': 
-    app.run()
+@app.route('/kontakti')
+def kontakti():
+    return '<html><h1>Kontakti</h1><p>Eva Martinsone</p></html>'
+
+if __name__ == '__main__':
+    app.run(port=80, debug=True)
